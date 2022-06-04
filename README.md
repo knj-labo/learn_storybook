@@ -23,3 +23,7 @@ pnpm i -DE eslint
 ```shell
 $ pnpx eslint --init
 ```
+
+```shell
+$ pnpx eslint . --ext .js,.jsx,.ts,.tsx --fix
+```
