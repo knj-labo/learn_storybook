@@ -1,9 +1,10 @@
 import React from 'react';
+import { expect } from '@storybook/jest';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { within, userEvent } from '@storybook/testing-library';
 
 import { Button } from './Button';
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Example/Button',
   component: Button,
@@ -13,30 +14,48 @@ export default {
   },
 } as ComponentMeta<typeof Button>;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 // eslint-disable-next-line react/jsx-props-no-spreading
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
   is_primary: true,
   label: 'Button',
 };
+Primary.play = async ({canvasElement, args}): Promise<void> => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button'));
+    await expect(args.onClick).toHaveBeenCalled();
+}
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   label: 'Button',
 };
+Secondary.play = async ({canvasElement, args}): Promise<void> => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button'));
+    await expect(args.onClick).toHaveBeenCalled();
+}
 
 export const Large = Template.bind({});
 Large.args = {
   size: 'large',
   label: 'Button',
 };
+Large.play = async ({canvasElement, args}): Promise<void> => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button'));
+    await expect(args.onClick).toHaveBeenCalled();
+}
 
 export const Small = Template.bind({});
 Small.args = {
   size: 'small',
   label: 'Button',
 };
+Small.play = async ({canvasElement, args}): Promise<void> => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button'));
+    await expect(args.onClick).toHaveBeenCalled();
+}
