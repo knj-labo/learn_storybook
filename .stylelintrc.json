@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "stylelint-config-recess-order"
+  ],
+  "rules": {
+    "max-nesting-depth" : 1
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.tsx"
+      ],
+      "rules": {},
+      "customSyntax": "@stylelint/postcss-css-in-js"
+    }
+  ]
+}
