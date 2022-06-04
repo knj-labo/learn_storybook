@@ -34,7 +34,15 @@
         {
           "namedComponents": "arrow-function"
         }
-      ]
+      ],
+      "import/extensions": [
+        "error",
+        {
+          "ts": "never",
+          "tsx": "never"
+        }
+      ],
+      "import/prefer-default-export": "off"
     },
     // @see https://stackoverflow.com/questions/71281457/why-do-i-keep-getting-jsx-is-not-defined-no-undef
     "globals": {
