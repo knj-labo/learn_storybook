@@ -15,3 +15,11 @@ $ pnpm run dev
 ```shell
 $ pnpx sb init
 ```
+
+```shell
+pnpm i -DE eslint
+```
+
+```shell
+$ pnpx eslint --init
+```
