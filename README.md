@@ -27,3 +27,7 @@ $ pnpx eslint --init
 ```shell
 $ pnpx eslint . --ext .js,.jsx,.ts,.tsx --fix
 ```
+
+```shell
+✖ 50 problems (50 errors, 0 warnings)
+```
