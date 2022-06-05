@@ -23,7 +23,7 @@ export const Form = () => {
         <input
           css={input}
           type="text"
-          placeholder="bill"
+          placeholder="テスト花子"
           {...register('name')}
           data-testid="name"
         />
@@ -36,7 +36,7 @@ export const Form = () => {
         <input
           css={input}
           type="email"
-          placeholder="luo"
+          placeholder="test@example.com"
           {...register('email')}
           data-testid="email"
         />
@@ -48,7 +48,6 @@ export const Form = () => {
         </label>
         <input
           css={input}
-          placeholder="bluebill1049@hotmail.com"
           type="password"
           {...register('password')}
           data-testid="password"
