@@ -22,7 +22,7 @@ export const 全項目適切に入力された場合 = Template.bind({});
       delay: 100,
     });
     await userEvent.type(canvas.getByTestId('password'), 'samplepassword', {
-        delay: 100,
+      delay: 100,
     });
     await userEvent.click(canvas.getByRole('button'));
   }
