@@ -1,5 +1,8 @@
 # learn_storybook
 [![Netlify Status](https://api.netlify.com/api/v1/badges/05c2d9b7-0779-4146-8d99-f8fd6ae2160b/deploy-status)](https://app.netlify.com/sites/jovial-granita-5a9ce5/deploys)
+<a href="https://github.com/storybooks/storybook" target="_blank"><img src="https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg"></a>
+### Storybook
+Check out the [DEMO](https://jovial-granita-5a9ce5.netlify.app/)
 
 ### Think of the Test strategy
 - Static Test 
