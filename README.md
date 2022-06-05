@@ -1,33 +1,39 @@
 # learn_storybook
+## Think of the Test strategy
+- Static Test 
+  - TypeScript, ESLint, Stylelint
+  - first of all, must set up a static test enviroment
+- Unit Test 
+  - Jest, Vitest
+  - to run a test for custom hooks or a component
+  - as documentation
+- Integration Test 
+  - React Testing Library
+- E2E Test  
+  - Playwright
 
+## Usage 
+install dependencies
 ```shell
-$ pnpm create vite
+$ yarn
 ```
 
+develop ui components with storybook
 ```shell
-$ pnpm install
+$ yarn storybook
 ```
 
+lint code with eslint 
 ```shell
-$ pnpm run dev
+$ yarn run lint
 ```
 
+format code with prettier
 ```shell
-$ pnpx sb init
+$ yarn run prettier
 ```
 
+lint code with stylelint
 ```shell
-pnpm i -DE eslint
-```
-
-```shell
-$ pnpx eslint --init
-```
-
-```shell
-$ pnpx eslint . --ext .js,.jsx,.ts,.tsx --fix
-```
-
-```shell
-✖ 50 problems (50 errors, 0 warnings)
+$ yarn run stylelint
 ```
