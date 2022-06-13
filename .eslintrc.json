@@ -21,6 +21,7 @@
         "@typescript-eslint"
     ],
     "rules": {
+      "no-console": "error",
       "react/jsx-props-no-spreading": "off",
       // @see https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
       "react/react-in-jsx-scope": "off",
