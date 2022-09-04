@@ -5,7 +5,7 @@ type ButtonProps = {
   /**
    * Is this the principal call to action on the page?
    */
-  is_primary?: boolean;
+  is_disabled?: boolean;
   /**
    * What background color to use
    */
@@ -33,6 +33,7 @@ const button = () => css`
   border: 0;
   border-radius: 3em;
 `;
+
 const primary = css`
   color: white;
   background-color: #1ea7fd;
@@ -63,13 +64,13 @@ const large = css`
  * Primary UI component for user interaction
  */
 export const Button: React.FC<ButtonProps> = ({
-  is_primary = false,
+  is_disabled = false,
   size = 'medium',
   backgroundColor,
   label,
   ...otherProps
 }): JSX.Element => {
-  const mode = is_primary ? primary : secondary;
+  const mode = is_disabled ? primary : secondary;
 
   const sizeCss =
     size === 'small'
