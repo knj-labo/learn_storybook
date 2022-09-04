@@ -27,26 +27,26 @@ const link = css`
 `;
 
 export const List = () => (
-    <ul css={list}>
-      <li css={item}>
-        <a css={link} href="#">
-          Twitter
-        </a>
-      </li>
-      <li css={item}>
-        <a css={link} href="#">
-          Github
-        </a>
-      </li>
-      <li css={item}>
-        <a css={link} href="#">
-          Zenn
-        </a>
-      </li>
-      <li css={item}>
-        <a css={link} href="#">
-          Note
-        </a>
-      </li>
-    </ul>
-  );
+  <ul css={list}>
+    <li css={item}>
+      <a css={link} href="#">
+        Twitter
+      </a>
+    </li>
+    <li css={item}>
+      <a css={link} href="#">
+        Github
+      </a>
+    </li>
+    <li css={item}>
+      <a css={link} href="#">
+        Zenn
+      </a>
+    </li>
+    <li css={item}>
+      <a css={link} href="#">
+        Note
+      </a>
+    </li>
+  </ul>
+);
