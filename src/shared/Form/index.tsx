@@ -66,7 +66,7 @@ const form = css`
   padding: 20px;
   border-width: 2px;
   border-style: solid;
-    border-color: #222222;
+  border-color: #222222;
 
   > div + div {
     margin-top: 16px;
