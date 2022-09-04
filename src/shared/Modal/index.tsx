@@ -1,10 +1,3 @@
 import React from 'react';
 
-
-export const Modal = (): JSX.Element => {
-    return (
-        <>
-                <h2>Hello Modal</h2>
-        </>
-    );
-};
+export const Modal = (): JSX.Element => <h2>Hello Modal</h2>;
