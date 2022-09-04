@@ -34,6 +34,13 @@ const button = () => css`
   border-radius: 3em;
   color: white;
   box-shadow: rgb(0 0 0 / 15%) 0 0 0 1px inset;
+  
+  &:disabled {
+    background: gray;
+  }
+  &[aria-disabled="true"] {
+    cursor:not-allowed;
+  }
 `;
 
 const small = css`
@@ -89,7 +96,7 @@ export const Button: React.FC<ButtonProps> = ({
       ? blue
       : color === 'green'
       ? green
-      : '';
+      : blue;
 
   return (
     <button
@@ -97,6 +104,7 @@ export const Button: React.FC<ButtonProps> = ({
       css={[button, sizeCss, colorCss]}
       {...otherProps}
       disabled={is_disabled}
+      aria-disabled={is_disabled}
     >
       {children}
     </button>
