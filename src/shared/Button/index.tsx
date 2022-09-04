@@ -34,12 +34,12 @@ const button = () => css`
   border-radius: 3em;
   color: white;
   box-shadow: rgb(0 0 0 / 15%) 0 0 0 1px inset;
-  
+
   &:disabled {
     background: gray;
   }
-  &[aria-disabled="true"] {
-    cursor:not-allowed;
+  &[aria-disabled='true'] {
+    cursor: not-allowed;
   }
 `;
 
