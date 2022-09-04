@@ -17,7 +17,7 @@ type ButtonProps = {
   /**
    * Button contents
    */
-  children: string;
+  children: JSX.Element;
   /**
    * Optional click handler
    */

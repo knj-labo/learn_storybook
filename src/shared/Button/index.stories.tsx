@@ -17,43 +17,37 @@ export default {
 // eslint-disable-next-line react/jsx-props-no-spreading
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  children: 'Button',
+export const 応募する= Template.bind({});
+
+応募する.args = {
+  color: "blue",
+  children: <>応募する</>,
 };
-Primary.play = async ({ canvasElement, args }): Promise<void> => {
+
+応募する.play = async ({ canvasElement, args }): Promise<void> => {
   const canvas = within(canvasElement);
   await userEvent.click(canvas.getByRole('button'));
   await expect(args.onClick).toHaveBeenCalled();
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  children: 'Button',
+export const 削除する = Template.bind({});
+削除する.args = {
+    color: "red",
+    children: <>削除する</>,
 };
-Secondary.play = async ({ canvasElement, args }): Promise<void> => {
+削除する.play = async ({ canvasElement, args }): Promise<void> => {
   const canvas = within(canvasElement);
   await userEvent.click(canvas.getByRole('button'));
   await expect(args.onClick).toHaveBeenCalled();
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  children: 'Button',
+export const クリックできない削除する　= Template.bind({});
+クリックできない削除する.args = {
+  color: "red",
+  children: <>削除する</>,
+  is_disabled: true
 };
-Large.play = async ({ canvasElement, args }): Promise<void> => {
-  const canvas = within(canvasElement);
-  await userEvent.click(canvas.getByRole('button'));
-  await expect(args.onClick).toHaveBeenCalled();
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  children: 'Button',
-};
-Small.play = async ({ canvasElement, args }): Promise<void> => {
+クリックできない削除する.play = async ({ canvasElement, args }): Promise<void> => {
   const canvas = within(canvasElement);
   await userEvent.click(canvas.getByRole('button'));
   await expect(args.onClick).toHaveBeenCalled();
