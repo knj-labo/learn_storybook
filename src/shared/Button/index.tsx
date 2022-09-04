@@ -9,7 +9,7 @@ type ButtonProps = {
   /**
    * What background color to use
    */
-  backgroundColor?: string;
+  color?: 'red' | 'green' | 'blue';
   /**
    * How large should the button be?
    */
@@ -17,7 +17,7 @@ type ButtonProps = {
   /**
    * Button contents
    */
-  label: string;
+  children: string;
   /**
    * Optional click handler
    */
@@ -32,16 +32,7 @@ const button = () => css`
   cursor: pointer;
   border: 0;
   border-radius: 3em;
-`;
-
-const primary = css`
   color: white;
-  background-color: #1ea7fd;
-`;
-
-const secondary = css`
-  color: #333;
-  background-color: transparent;
   box-shadow: rgb(0 0 0 / 15%) 0 0 0 1px inset;
 `;
 
@@ -60,18 +51,28 @@ const large = css`
   font-size: 16px;
 `;
 
+const red = css`
+  background-color: #dc143c;
+`;
+
+const blue = css`
+  background-color: #0045e4;
+`;
+
+const green = css`
+  background-color: #32cd32;
+`;
+
 /**
  * Primary UI component for user interaction
  */
 export const Button: React.FC<ButtonProps> = ({
-  is_disabled = false,
   size = 'medium',
-  backgroundColor,
-  label,
+  color,
+  children,
+  is_disabled = false,
   ...otherProps
 }): JSX.Element => {
-  const mode = is_disabled ? primary : secondary;
-
   const sizeCss =
     size === 'small'
       ? small
@@ -80,14 +81,24 @@ export const Button: React.FC<ButtonProps> = ({
       : size === 'large'
       ? large
       : '';
+
+  const colorCss =
+    color === 'red'
+      ? red
+      : color === 'blue'
+      ? blue
+      : color === 'green'
+      ? green
+      : '';
+
   return (
     <button
       type="button"
-      css={[button, sizeCss, mode]}
-      style={{ backgroundColor }}
+      css={[button, sizeCss, colorCss]}
       {...otherProps}
+      disabled={is_disabled}
     >
-      {label}
+      {children}
     </button>
   );
 };

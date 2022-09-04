@@ -19,8 +19,7 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  is_primary: true,
-  label: 'Button',
+  children: 'Button',
 };
 Primary.play = async ({ canvasElement, args }): Promise<void> => {
   const canvas = within(canvasElement);
@@ -30,7 +29,7 @@ Primary.play = async ({ canvasElement, args }): Promise<void> => {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: 'Button',
+  children: 'Button',
 };
 Secondary.play = async ({ canvasElement, args }): Promise<void> => {
   const canvas = within(canvasElement);
@@ -41,7 +40,7 @@ Secondary.play = async ({ canvasElement, args }): Promise<void> => {
 export const Large = Template.bind({});
 Large.args = {
   size: 'large',
-  label: 'Button',
+  children: 'Button',
 };
 Large.play = async ({ canvasElement, args }): Promise<void> => {
   const canvas = within(canvasElement);
@@ -52,7 +51,7 @@ Large.play = async ({ canvasElement, args }): Promise<void> => {
 export const Small = Template.bind({});
 Small.args = {
   size: 'small',
-  label: 'Button',
+  children: 'Button',
 };
 Small.play = async ({ canvasElement, args }): Promise<void> => {
   const canvas = within(canvasElement);
